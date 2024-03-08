@@ -1,6 +1,4 @@
 $(document).ready(function() {
-    alert("hello")
-        // Attach an event listener to the search bar
     $('#searchBar').on('input', function() {
         var searchText = $(this).val().toLowerCase(); // Get the value of the search bar and convert to lowercase
         $('#algorithmList li').each(function() {
