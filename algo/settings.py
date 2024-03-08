@@ -125,4 +125,3 @@ STATICFILES_DIRS = [
 STATICFILES_DIRS = [BASE_DIR/'static',]
 STATIC_ROOT = BASE_DIR/'staticfiles'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Change this to the directory where your static files are collected during production.
