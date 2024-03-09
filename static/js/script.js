@@ -12,3 +12,15 @@ $(document).ready(function() {
         });
     });
 });
+$(document).ready(function() {
+    $('#input-value').on('input', function() {
+
+        var target = 'a';
+        var inputValue = $(this).val();
+        if (target.includes(inputValue)) {
+            alert("good bhai jany dy ")
+        } else {
+            alert("ruk ja na bhai ")
+        }
+    });
+})

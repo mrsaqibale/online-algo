@@ -4,24 +4,26 @@
 <input type="text" id="searchBar" placeholder="Search algorithms">
 
 <ul id="algorithmList">
-  <li>Insertion Sort</li>
-  <li>Quick Sort</li>
-  <li>Merge Sort</li>
-  <li>Heap Sort</li>
-  <li>Radix Sort</li>
-  <li>Counting Sort</li>
-  <li>Bucket Sort</li>
-  <li>Shell Sort</li>
-  <li>Linear Search</li>
-  <li>Binary Search</li>
-  <li>Depth First Search (DFS)</li>
-  <li>Breadth First Search (BFS)</li>
-  <li>Dijkstra's Algorithm</li>
-  <li>Bellman-Ford Algorithm</li>
-  <li>Floyd-Warshall Algorithm</li>
-  <li>Prim's Algorithm</li>
-  <li>Kruskal's Algorithm</li>
-  <li>Topological Sorting</li>
+  <li class="dynamic-link" data-value="1">Insertion Sort</li>
+  <li class="dynamic-link" data-value="2">Quick Sort</li>
+  <li class="dynamic-link" data-value="3">Merge Sort</li>
+  <li class="dynamic-link" data-value="4">Heap Sort</li>
+  <li class="dynamic-link" data-value="5">Radix Sort</li>
+  <li class="dynamic-link" data-value="6">Counting Sort</li>
 </ul>
+
+
+
+<form>
+<div id="dynamic-form" class="popup">
+  <form  method='GET' id="dynamic-form-content">
+      <input type="text" id="input-value" name="input-value">
+      {% comment %} <button type="submit" id="submit-button" value="" > send me</button> {% endcomment %}
+      <input type="submit" id="submit-button" value= "Check">
+  </form>  
+</div>
+</form>
+
+
 
 {% endblock block %}
