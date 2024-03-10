@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 
 {% block block %} 
+{{data.value}}
+
 <input type="text" id="searchBar" placeholder="Search algorithms">
 
 <ul id="algorithmList">
-  <li class="dynamic-link" data-value="code1">Insertion Sort</li>
+  <li class="dynamic-link" data-value="start_with_a">Start with 'a' (aa*b*)</li>
   <li class="dynamic-link" data-value="2">Quick Sort</li>
   <li class="dynamic-link" data-value="3">Merge Sort</li>
   <li class="dynamic-link" data-value="4">Heap Sort</li>

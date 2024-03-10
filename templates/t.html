@@ -1,42 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Check Input Field for 'a's or 'b's</title>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<style>
-    .error {
-        color: red;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directed Graph of Circles</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+            margin-bottom: 50px; /* Adjust the spacing between circles */
+        }
+    </style>
 </head>
 <body>
-
-<label for="inputField">Enter 'a's or 'b's only:</label>
-<input type="text" id="inputField">
-<label id="errorLabel" class="error" style="display:none;">Correct your input.</label>
-
-<script>
-$(document).ready(function(){
-
-    $('#inputField').on('input', function(){
-        var timeout;
-        clearTimeout(timeout); 
-        var inputValue = $(this).val();
-        var pattern = /^[ab]+$/;
-
-        if (!pattern.test(inputValue)) {
-            $('#errorLabel').show();
-            timeout = setTimeout(function() {
-                $('#inputField').val(inputValue.replace(/[^ab]/g, ''));
-            }, 500); 
-        } else {
-            $('#errorLabel').hide();
-        }
-    });
-});
-</script>
-
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-2 text-center">
+                <div class="circle">q1</div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-2 text-center">
+                <div class="circle">q1</div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-2 text-center">
+                <div class="circle">q1</div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-2 text-center">
+                <div class="circle">q1</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
