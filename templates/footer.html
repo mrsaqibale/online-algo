@@ -25,23 +25,30 @@
         var value ;
         $('.dynamic-link').on('click', function(e) {
             e.preventDefault();
-            //value = $(this).data('value');
-            // Set input value based on link clicked
-            //$('#input-value').val(value); 
+            value = $(this).data('value');
+            //disable input field
+            $('#input-algo').prop('disabled', true);
+            //set the value of first input field 
+            $('#input-algo').val(value); 
             // Set submit button value based on link clicked
             //$('#submit-button').val(value); 
             $('#dynamic-form').show();
         });
 
         // value must b  a's or b's 
-        $('#input-value').on('input', function() {
-
-            var target = 'a';
+        $('#input-value').on('input', function(){
+            var timeout;
+            clearTimeout(timeout); 
             var inputValue = $(this).val();
-            if (target.includes(inputValue)) {
-                alert("good bhai jany dy ")
+            var pattern = /^[ab]+$/;
+    
+            if (!pattern.test(inputValue)) {
+                $('#errorLabel').show();
+                timeout = setTimeout(function() {
+                    $('#inputField').val(inputValue.replace(/[^ab]/g, ''));
+                }, 500);
             } else {
-                alert("ruk ja na bhai ")
+                $('#errorLabel').hide();
             }
         });
 

@@ -4,7 +4,7 @@
 <input type="text" id="searchBar" placeholder="Search algorithms">
 
 <ul id="algorithmList">
-  <li class="dynamic-link" data-value="1">Insertion Sort</li>
+  <li class="dynamic-link" data-value="code1">Insertion Sort</li>
   <li class="dynamic-link" data-value="2">Quick Sort</li>
   <li class="dynamic-link" data-value="3">Merge Sort</li>
   <li class="dynamic-link" data-value="4">Heap Sort</li>
@@ -17,9 +17,15 @@
 <form>
 <div id="dynamic-form" class="popup">
   <form  method='GET' id="dynamic-form-content">
-      <input type="text" id="input-value" name="input-value">
-      {% comment %} <button type="submit" id="submit-button" value="" > send me</button> {% endcomment %}
-      <input type="submit" id="submit-button" value= "Check">
+    <label>Algo Name:</label>
+    <input type="text" id="input-algo" name="input-algo">
+    <br>
+    <label>String Val:</label>
+    <label id="errorLabel" class="error" style="display:none; color:red;">Invalid input.</label>
+    <input type="text" id="input-value" name="input-value">
+
+    <br>
+    <input type="submit" id="submit-button" value= "Check">
   </form>  
 </div>
 </form>

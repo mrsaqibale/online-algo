@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Check Input Field for 'a's or 'b's</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    .error {
+        color: red;
+    }
+</style>
+</head>
+<body>
+
+<label for="inputField">Enter 'a's or 'b's only:</label>
+<input type="text" id="inputField">
+<label id="errorLabel" class="error" style="display:none;">Correct your input.</label>
+
+<script>
+$(document).ready(function(){
+
+    $('#inputField').on('input', function(){
+        var timeout;
+        clearTimeout(timeout); 
+        var inputValue = $(this).val();
+        var pattern = /^[ab]+$/;
+
+        if (!pattern.test(inputValue)) {
+            $('#errorLabel').show();
+            timeout = setTimeout(function() {
+                $('#inputField').val(inputValue.replace(/[^ab]/g, ''));
+            }, 500); 
+        } else {
+            $('#errorLabel').hide();
+        }
+    });
+});
+</script>
+
+</body>
+</html>
