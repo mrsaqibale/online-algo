@@ -44,10 +44,14 @@
     
             if (!pattern.test(inputValue)) {
                 $('#errorLabel').show();
+                $('#submit-button').prop('disabled', true);
                 timeout = setTimeout(function() {
-                    $('#inputField').val(inputValue.replace(/[^ab]/g, ''));
+                    $('#input-value').val(inputValue.replace(/[^ab]/g, ''));
+                    $('#submit-button').prop('disabled', false);
+                    $('#errorLabel').hide();    
                 }, 500);
             } else {
+                $('#submit-button').prop('disabled', false);
                 $('#errorLabel').hide();
             }
         });
