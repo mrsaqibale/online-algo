@@ -1,2 +1,18 @@
-{{value}}
-{{exp}}
+
+{% extends 'base.html' %}
+
+
+{% block block %}
+<h3>The Reqular Expression maybe </h3>
+<h2 style="color:red">{{exp}}</h2>
+{% for n in value %}
+<div class="container">
+    <div class="row text-center justify-content-center">
+        <div class="col-md-2 text-center">
+            <div class="circle">{{n}}--></div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock block %}
+    

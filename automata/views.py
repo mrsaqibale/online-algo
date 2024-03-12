@@ -1,9 +1,8 @@
 from django.shortcuts import render
 from automata.algo_imp import start_with_a
 # Create your views here.
-
+data = {}
 def home(request):
-    data={}
     if request.method == 'GET':
         btn_val = request.GET.get('input-value')
         btn_algo = request.GET.get('input-algo')
@@ -14,9 +13,10 @@ def home(request):
                 'value':values,
                 'exp':exps
                 }
-            return render(request,'show.html',data)
+            return render(request, 'show.html',data)
     return render(request,'home.html')
 
 def show(request):
     pass
+    
 
