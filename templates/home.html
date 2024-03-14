@@ -1,35 +1,32 @@
-{% extends 'base.html' %}
-
-{% block block %} 
-{{data.value}}
+{% extends 'base.html' %} {% block block %} {{data.value}}
 
 <input type="text" id="searchBar" placeholder="Search algorithms">
 
 <ul id="algorithmList">
-  <li class="dynamic-link" data-value="start_with_a">Start with 'a' (aa*b*)</li>
-  <li class="dynamic-link" data-value="2">Quick Sort</li>
-  <li class="dynamic-link" data-value="3">Merge Sort</li>
-  <li class="dynamic-link" data-value="4">Heap Sort</li>
-  <li class="dynamic-link" data-value="5">Radix Sort</li>
-  <li class="dynamic-link" data-value="6">Counting Sort</li>
+    <li class="dynamic-link" data-value="start_with_a">Start with 'a' (aa*b*)</li>
+    <li class="dynamic-link" data-value="even_even">Even Even</li>
+    <li class="dynamic-link" data-value="3">Merge Sort</li>
+    <li class="dynamic-link" data-value="4">Heap Sort</li>
+    <li class="dynamic-link" data-value="5">Radix Sort</li>
+    <li class="dynamic-link" data-value="6">Counting Sort</li>
 </ul>
 
 
 
 <form>
-<div id="dynamic-form" class="popup">
-  <form  method='GET' id="dynamic-form-content">
-    <label>Algo Name:</label>
-    <input type="text" id="input-algo" name="input-algo">
-    <br>
-    <label>String Val:</label>
-    <label id="errorLabel" class="error" style="display:none; color:red;">Invalid input.</label>
-    <input type="text" id="input-value" name="input-value">
+    <div id="dynamic-form" class="popup">
+        <form method='GET' id="dynamic-form-content">
+            <label>Algo Name:</label>
+            <input type="text" id="input-algo" name="input-algo">
+            <br>
+            <label>String Val:</label>
+            <label id="errorLabel" class="error" style="display:none; color:red;">Invalid input.</label>
+            <input type="text" id="input-value" name="input-value">
 
-    <br>
-    <input type="submit" id="submit-button" value= "Check">
-  </form>  
-</div>
+            <br>
+            <input type="submit" id="submit-button" value="Check">
+        </form>
+    </div>
 </form>
 
 
